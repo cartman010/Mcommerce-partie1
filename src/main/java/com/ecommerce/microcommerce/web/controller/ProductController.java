@@ -131,6 +131,13 @@ public class ProductController {
     	
     }
 
+    //Liste des produits triés par ordre alphabétique
+    @GetMapping(value = "/TriProduits")
+    public List<Product> trierProduitsParOrdreAlphabetique(){
+    	
+    	return productDao.findAllByOrderByNom();
+    	
+    }
 
 
 }
